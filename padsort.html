@@ -428,7 +428,7 @@
             addedVoters.forEach((v, index) => {
                 message += `${index + 1}. CI: ${v.cedula},`;
                 message += `CUPON: \n`;
-                message += `,WHATSAPP: \n`;
+                message += `,WHATSAPP: `;
             });
 
             const encodedMessage = encodeURIComponent(message);
