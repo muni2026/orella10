@@ -415,11 +415,20 @@
                 return;
             }
 
-            let message = "LISTA DE VOTANTES DE MI EQUIPO\n\n";
+            //ORIGINAL
+            //let message = "LISTA DE VOTANTES DE MI EQUIPO\n\n";
+            //addedVoters.forEach((v, index) => {
+                //message += `${index + 1}. CI: ${v.cedula}\n`;
+                //message += `Nombre: ${v.nombre}\n`;
+                //message += `Cupon: ${v.cupon}\n\n`;
+            //});
+			
+			//SEPARADOS POR ";"
+			//let message = "LISTA DE VOTANTES DE MI EQUIPO\n\n";
             addedVoters.forEach((v, index) => {
-                message += `${index + 1}. CI: ${v.cedula}\n`;
-                message += `Nombre: ${v.nombre}\n`;
-                message += `Cupon: ${v.cupon}\n\n`;
+                message += `${index + 1}. CI: ${v.cedula};CUPON: \n`;
+                //message += `Nombre: ${v.nombre}\n`;
+                message += `WHATSAPP: `;
             });
 
             const encodedMessage = encodeURIComponent(message);
